@@ -1,0 +1,34 @@
+{
+  "name": "atendimento-operacional",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema MVC de atendimento operacional com Node, Express, TypeScript e MySQL.",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:init": "tsx src/config/initDatabase.ts",
+    "check": "tsc --noEmit"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie": "^1.0.2",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.3",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
