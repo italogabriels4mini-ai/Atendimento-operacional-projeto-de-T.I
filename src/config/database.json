@@ -2,8 +2,7 @@
   "host": "localhost",
   "port": 3306,
   "user": "root",
-  "password": "",
+  "password": "SUA_SENHA_DO_MYSQL",
   "database": "atendimento_operacional",
-  "connectionLimit": 10,
-  "charset": "utf8mb4"
+  "connectionLimit": 10
 }
