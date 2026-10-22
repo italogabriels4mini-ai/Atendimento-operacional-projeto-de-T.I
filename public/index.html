@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Central de atendimento operacional" />
+  <title>Atendimento Operacional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+  <main id="auth-screen" class="auth-screen">
+    <section class="auth-visual">
+      <div class="brand-lockup large"><span class="brand-mark">AO</span><span>atendimento<br><strong>operacional</strong></span></div>
+      <div class="auth-visual-copy">
+        <span class="eyebrow">central de suporte interno</span>
+        <h1>Resolver bem começa por <em>ouvir.</em></h1>
+        <p>Acompanhe cada solicitação com contexto, responsabilidade e um próximo passo claro.</p>
+      </div>
+      <div class="auth-visual-footer"><span>Operação em foco</span><span class="status-dot"></span><span>Dados protegidos</span></div>
+    </section>
+    <section class="auth-card-wrap">
+      <div class="auth-card">
+        <div class="auth-mobile-brand brand-lockup"><span class="brand-mark">AO</span><span>atendimento<br><strong>operacional</strong></span></div>
+        <div class="auth-heading"><span class="eyebrow">acesse sua central</span><h2 id="auth-title">Bom te ver por aqui.</h2><p id="auth-subtitle">Entre para acompanhar o que precisa de atenção.</p></div>
+        <div class="auth-switch" role="tablist"><button class="auth-switch-btn active" data-auth-mode="login">Entrar</button><button class="auth-switch-btn" data-auth-mode="signup">Criar conta</button></div>
+        <form id="login-form" class="auth-form">
+          <label>E-mail<input type="email" name="email" placeholder="voce@empresa.com" required autocomplete="email"></label>
+          <label>Senha<div class="password-field"><input type="password" name="senha" placeholder="Sua senha" required autocomplete="current-password"><button type="button" class="password-toggle" aria-label="Mostrar senha">◉</button></div></label>
+          <button class="button primary full" type="submit">Entrar na central <span>→</span></button>
+          <p class="form-hint">Acesso de demonstração: <strong>admin@atendops.com</strong> / <strong>Admin@123</strong></p>
+        </form>
+        <form id="signup-form" class="auth-form hidden">
+          <label>Nome completo<input type="text" name="nome" placeholder="Seu nome" required></label>
+          <label>E-mail corporativo<input type="email" name="email" placeholder="voce@empresa.com" required></label>
+          <label>Crie uma senha<input type="password" name="senha" placeholder="Mínimo de 6 caracteres" required minlength="6"></label>
+          <button class="button primary full" type="submit">Criar minha conta <span>→</span></button>
+          <p class="form-hint">Contas novas começam como cliente/funcionário.</p>
+        </form>
+        <div class="auth-security"><span class="lock-icon">⌁</span> Seus dados ficam protegidos e visíveis apenas para o seu perfil.</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-shell" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top"><div class="brand-lockup"><span class="brand-mark">AO</span><span>atendimento<br><strong>operacional</strong></span></div><button id="close-sidebar" class="icon-button mobile-only">×</button></div>
+      <div class="workspace-label">CENTRAL INTERNA</div>
+      <nav class="main-nav">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">◒</span><span>Visão geral</span></button>
+        <button class="nav-item" data-view="tickets"><span class="nav-icon">▤</span><span>Chamados</span><span class="nav-count" id="nav-ticket-count">0</span></button>
+        <button class="nav-item" data-view="reports" data-admin-only><span class="nav-icon">⌁</span><span>Relatórios</span></button>
+        <button class="nav-item" data-view="users" data-admin-only><span class="nav-icon">♙</span><span>Usuários</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span><span>Configurações</span></button>
+        <div class="sidebar-help"><span class="help-icon">?</span><div><strong>Precisa de ajuda?</strong><small>Fale com a operação</small></div><span>→</span></div>
+        <div class="user-mini"><div class="avatar" id="sidebar-avatar">MA</div><div class="user-mini-text"><strong id="sidebar-user-name">—</strong><small id="sidebar-user-role">—</small></div><button id="logout-btn" class="icon-button" title="Sair">↪</button></div>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <section class="main-area">
+      <header class="topbar"><button id="open-sidebar" class="icon-button mobile-only">☰</button><div class="breadcrumb"><span>Central operacional</span><b>/</b><strong id="breadcrumb-current">Visão geral</strong></div><div class="topbar-actions"><label class="global-search"><span>⌕</span><input id="global-search" placeholder="Buscar chamados..." /></label><button class="icon-button notification-button" title="Notificações">♢<i></i></button><div class="topbar-user"><div class="avatar" id="topbar-avatar">MA</div><span id="topbar-user-name">—</span><span class="chevron">⌄</span></div></div></header>
+      <main class="content-area">
+        <section id="view-dashboard" class="view active-view"></section>
+        <section id="view-tickets" class="view"></section>
+        <section id="view-detail" class="view"></section>
+        <section id="view-reports" class="view"></section>
+        <section id="view-users" class="view"></section>
+        <section id="view-settings" class="view"></section>
+      </main>
+    </section>
+  </div>
+
+  <div id="ticket-modal" class="modal-backdrop hidden"><div class="modal-card modal-large"><div class="modal-header"><div><span class="eyebrow">novo atendimento</span><h3>Abra um chamado</h3></div><button class="icon-button close-modal" data-modal="ticket-modal">×</button></div><form id="ticket-form" class="modal-form"><div class="form-grid"><label>Título do chamado<input name="titulo" placeholder="Ex.: Acesso ao portal corporativo" required minlength="5"></label><label>Categoria<select name="categoria_id" id="ticket-category" required></select></label><label>Prioridade<select name="prioridade"><option>Normal</option><option>Baixa</option><option>Alta</option><option>Urgente</option></select></label><label>Setor responsável<select name="setor_id" id="ticket-sector"><option value="">Definir depois</option></select></label></div><label>Descreva o que aconteceu<textarea name="descricao" rows="5" placeholder="Conte os detalhes, o que você já tentou e o impacto da situação." required minlength="10"></textarea></label><div class="upload-note"><span>＋</span><div><strong>Documentos necessários</strong><small>Informe no texto quais documentos ou evidências estão disponíveis. Upload de arquivos pode ser conectado ao Storage.</small></div></div><div class="modal-actions"><button type="button" class="button ghost close-modal" data-modal="ticket-modal">Cancelar</button><button type="submit" class="button primary">Abrir chamado <span>→</span></button></div></form></div></div>
+
+  <div id="rating-modal" class="modal-backdrop hidden"><div class="modal-card modal-small"><div class="modal-header"><div><span class="eyebrow">chamado encerrado</span><h3>Como foi o atendimento?</h3></div><button class="icon-button close-modal" data-modal="rating-modal">×</button></div><form id="rating-form" class="modal-form"><div class="rating-picker" id="rating-picker"><button type="button" data-rating="1">★</button><button type="button" data-rating="2">★</button><button type="button" data-rating="3">★</button><button type="button" data-rating="4">★</button><button type="button" data-rating="5">★</button></div><input type="hidden" name="nota" value="5"><label>Comentário (opcional)<textarea name="comentario" rows="3" placeholder="O que fez diferença para você?"></textarea></label><button type="submit" class="button primary full">Enviar avaliação</button></form></div></div>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
