@@ -2,7 +2,7 @@
   "host": "localhost",
   "port": 3306,
   "user": "root",
-  "password": "SUA_SENHA_DO_MYSQL",
+  "password": "Lab@01",
   "database": "atendimento_operacional",
   "connectionLimit": 10
 }

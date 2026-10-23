@@ -38,7 +38,7 @@ const errorHandler: ErrorRequestHandler = (error, _req, res, _next) => { console
 app.use(errorHandler);
 
 ensureDatabase().finally(() => {
-  app.listen(port, '0.0.0.0', () => console.log(`Atendimento Operacional ouvindo em http://0.0.0.0:${port}`));
+  app.listen(port, '0.0.0.0', () => console.log(`Atendimento Operacional ouvindo em http://localhost:3000`));
 });
 
 export default app;
