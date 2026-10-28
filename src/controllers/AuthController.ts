@@ -32,3 +32,12 @@ export class AuthController {
 
   static async me(req: AuthRequest, res: Response): Promise<void> { res.json({ user: req.user }); }
 }
+
+
+
+
+
+
+
+
+
