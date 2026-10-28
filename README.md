@@ -154,4 +154,6 @@ Antes do commit, confirme que `.env` não aparece em `git status`. Faça commits
 Com o servidor ligado, teste login pelo navegador. Depois abra um chamado pelo botão **Abrir chamado**, consulte seu detalhe, envie uma mensagem e entre com o administrador para alterar o status e distribuir o responsável. O comando `pnpm run check` verifica o TypeScript e `GET /api/health` mostra o estado da conexão com o banco.
 
 
+# Acesso de ADM
+
 Acesso de demonstração: admin@atendops.com / Admin@123
