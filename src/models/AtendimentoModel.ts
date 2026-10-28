@@ -9,7 +9,7 @@ export interface HistoryEntry {
   status_anterior: string | null;
   status_novo: string;
   observacao: string | null;
-  criado_em: 
+  criado_em: string;
 }
 
 export class AtendimentoModel {
