@@ -143,7 +143,7 @@ git init
 git add .
 git commit -m "feat: cria sistema de atendimento operacional"
 git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/atendimento-operacional.git
+git remote add origin https://github.com/italogabriels4mini-ai/Atendimento-operacional-projeto-de-T.I.git
 git push -u origin main
 ```
 
