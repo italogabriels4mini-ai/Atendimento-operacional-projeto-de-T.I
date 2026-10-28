@@ -8,4 +8,4 @@ router.post('/cadastro', validate(registerSchema), AuthController.cadastro);
 router.post('/login', validate(loginSchema), AuthController.login);
 router.post('/logout', AuthController.logout);
 router.get('/me', authenticate, AuthController.me);
-export default router;
+export default router; 
