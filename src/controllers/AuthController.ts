@@ -25,7 +25,7 @@ export class AuthController {
       const { senha_hash: _senha, ...publicUser } = user;
       setSessionCookie(res, publicUser);
       res.json({ user: publicUser, message: 'Login realizado.' });
-    } catch (error) { res.status(500).json({ error: 'Não foi possível realizar o login.', detail: error instanceof Error ? error.message : undefined }); }
+    } catch (error) { res.status(500).json({ error: 'Não foi possível realizar o login. Tente novamente', detail: error instanceof Error ? error.message : undefined }); }
   }
 
   static async logout(_req: Request, res: Response): Promise<void> { clearSessionCookie(res); res.json({ message: 'Sessão encerrada.' }); }
