@@ -12,3 +12,4 @@ async function main(): Promise<void> {
 }
 
 main().catch(async (error) => { console.error(error); await closeDatabase(); process.exitCode = 1; });
+
