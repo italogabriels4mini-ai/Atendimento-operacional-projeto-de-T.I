@@ -41,4 +41,4 @@ ensureDatabase().finally(() => {
   app.listen(port, '0.0.0.0', () => console.log(`Atendimento Operacional ouvindo em http://localhost:3000`));
 });
 
-export default app;
+export default app;  
