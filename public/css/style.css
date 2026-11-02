@@ -1,8 +1,4 @@
 
-/* =========================================
-   CORREÇÃO DO LAYOUT — ATENDIMENTO OPERACIONAL
-   ========================================= */
-
 /* Mantém login e sistema separados */
 .hidden {
     display: none !important;
@@ -114,6 +110,7 @@ body {
     font-size: 14px;
     line-height: 1.7;
 }
+
 /* Abas de login e cadastro */
 .auth-switch {
     display: flex;
@@ -182,6 +179,7 @@ body {
     border-color: #087f8c;
     box-shadow: 0 0 0 4px rgba(8, 127, 140, 0.09);
 }
+
 /* Campo de senha e botão de visualização */
 .password-field {
     display: flex;
@@ -256,6 +254,7 @@ body {
     font-size: 13px;
     line-height: 1.6;
 }
+
 /* Área interna do sistema */
 .app-shell:not(.hidden) {
     display: flex;
@@ -315,6 +314,7 @@ body {
     min-width: 0;
     max-width: 100%;
 }
+
 /* Responsividade */
 @media (max-width: 760px) {
     .auth-screen:not(.hidden) {
