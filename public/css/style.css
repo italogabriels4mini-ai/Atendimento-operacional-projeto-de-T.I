@@ -114,3 +114,71 @@ body {
     font-size: 14px;
     line-height: 1.7;
 }
+/* Abas de login e cadastro */
+.auth-switch {
+    display: flex;
+    gap: 24px;
+    margin: 28px 0 24px;
+    border-bottom: 1px solid #e4eaf1;
+}
+
+.auth-switch-btn {
+    appearance: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 12px 2px;
+    margin-bottom: -1px;
+    background: transparent;
+    color: #718096;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-switch-btn.active {
+    color: #087f8c;
+    border-bottom-color: #087f8c;
+}
+
+/* Formulários */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 100%;
+}
+
+.auth-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    color: #33485a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.auth-form input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 1px solid #dce5ed;
+    border-radius: 11px;
+    outline: none;
+    background: #fff;
+    color: #172b3a;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.auth-form input::placeholder {
+    color: #9aa9b8;
+}
+
+.auth-form input:focus {
+    border-color: #087f8c;
+    box-shadow: 0 0 0 4px rgba(8, 127, 140, 0.09);
+}
