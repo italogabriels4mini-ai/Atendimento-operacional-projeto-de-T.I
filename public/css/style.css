@@ -182,3 +182,77 @@ body {
     border-color: #087f8c;
     box-shadow: 0 0 0 4px rgba(8, 127, 140, 0.09);
 }
+/* Campo de senha e botão de visualização */
+.password-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.password-field input {
+    flex: 1;
+    width: 100%;
+}
+
+.password-toggle {
+    flex: 0 0 42px;
+    min-height: 42px;
+    border: 1px solid #dce5ed;
+    border-radius: 10px;
+    background: #fff;
+    color: #33485a;
+    cursor: pointer;
+}
+
+/* Botões */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 0 18px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button.full {
+    width: 100%;
+}
+
+.button.primary {
+    color: #fff;
+    background: linear-gradient(135deg, #087f8c, #086b7a);
+    box-shadow: 0 7px 18px rgba(8, 127, 140, 0.17);
+}
+
+.button.primary:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+}
+
+.form-hint {
+    color: #718096;
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.auth-security {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 25px;
+    padding: 14px;
+    border: 1px solid #e1eaf0;
+    border-radius: 12px;
+    background: #fff;
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.6;
+}
