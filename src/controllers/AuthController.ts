@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import type { Request, Response } from 'express';
 import { UsuarioModel } from '../models/UsuarioModel';
 import { clearSessionCookie, setSessionCookie } from '../middlewares/auth';
-import type { AuthRequest, Role } from '../types';
+import type { AuthRequest } from '../types';
 
 export class AuthController {
   static async cadastro(req: Request, res: Response): Promise<void> {
