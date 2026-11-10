@@ -7,4 +7,5 @@ const router = Router();
 router.use(authenticate, requireRole('admin'));
 router.get('/dashboard', RelatorioController.dashboard);
 router.get('/', RelatorioController.relatorios);
+
 export default router;

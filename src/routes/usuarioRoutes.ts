@@ -14,4 +14,5 @@ router.get('/', UsuarioController.list);
 router.post('/', validate(userSchema), UsuarioController.create);
 router.put('/:id', validate(updateSchema), UsuarioController.update);
 router.post('/setores', validate(sectorSchema), UsuarioController.createSector);
+
 export default router;
