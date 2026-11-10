@@ -53,4 +53,4 @@ src/server.ts            Composição da aplicação e inicialização
 
 ## Entrega
 
-A aplicação será compilável com `npm run build`, iniciará em `PORT`/3000 com `npm run dev` ou `npm start`, terá `/manus-routes.json`, documentação de instalação no Windows/VS Code e arquivos SQL para criação e carga do banco.
+A aplicação será compilável com `npm run build`, iniciará em `PORT`/3000 com `npm run dev` ou `npm start`,documentação de instalação no Windows/VS Code e arquivos SQL para criação e carga do banco.

@@ -15,13 +15,25 @@
 
   <main id="auth-screen" class="auth-screen">
     <section class="auth-visual">
-      <div class="brand-lockup large"><span class="brand-mark">AO</span><span>atendimento<br><strong>operacional</strong></span></div>
+      <div class="brand-lockup large"><img src="/proatend_logo_fundo_escuro.png" alt="ProAtend - Central de suporte interno" style="height:80px;width:auto;display:block;"></div>
       <div class="auth-visual-copy">
         <span class="eyebrow">central de suporte interno</span>
         <h1>Resolver bem começa por <em>ouvir.</em></h1>
         <p>Acompanhe cada solicitação com contexto, responsabilidade e um próximo passo claro.</p>
       </div>
-      <div class="auth-visual-footer"><span>Operação em foco</span><span class="status-dot"></span><span>Dados protegidos</span></div>
+     <div class="auth-visual-footer" aria-label="Informações da central">
+  <span class="footer-item">
+    <span class="footer-check" aria-hidden="true">✓</span>
+    Operação em foco
+  </span>
+
+  <span class="footer-divider" aria-hidden="true"></span>
+
+  <span class="footer-item">
+    <span class="footer-check" aria-hidden="true">✓</span>
+    Dados protegidos
+  </span>
+</div> 
     </section>
     <section class="auth-card-wrap">
       <div class="auth-card">
@@ -32,7 +44,7 @@
           <label>E-mail<input type="email" name="email" placeholder="voce@empresa.com" required autocomplete="email"></label>
           <label>Senha<div class="password-field"><input type="password" name="senha" placeholder="Sua senha" required autocomplete="current-password"><button type="button" class="password-toggle" aria-label="Mostrar senha">◉</button></div></label>
           <button class="button primary full" type="submit">Entrar na central <span>→</span></button>
-          <p class="form-hint">Acesso de demonstração: <strong>admin@atendops.com</strong> / <strong>Admin@123</strong></p>
+          
         </form>
         <form id="signup-form" class="auth-form hidden">
           <label>Nome completo<input type="text" name="nome" placeholder="Seu nome" required></label>
@@ -41,7 +53,12 @@
           <button class="button primary full" type="submit">Criar minha conta <span>→</span></button>
           <p class="form-hint">Contas novas começam como cliente/funcionário.</p>
         </form>
-        <div class="auth-security"><span class="lock-icon">⌁</span> Seus dados ficam protegidos e visíveis apenas para o seu perfil.</div>
+       
+<div class="auth-security">
+  <span class="lock-icon" aria-hidden="true">✓</span>
+  <span>Seus dados ficam protegidos e visíveis apenas para o seu perfil.</span>
+</div>
+
       </div>
     </section>
   </main>
